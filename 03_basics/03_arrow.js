@@ -43,3 +43,9 @@ const globals = function(){
 
 const gayab = (num1,num2) => ({usernamew:"adsa"})
 console.log(gayab())
+
+const onet = function(num){
+    console.log(num)
+}
+onet(5)
+
