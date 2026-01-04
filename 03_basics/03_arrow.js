@@ -32,3 +32,14 @@ console.log(addition(5,2))
 
 const addition1 = (num1,num2) =>  ({username : "Hitesh" })
 console.log(addition1())
+
+
+const globalfunction = {
+    username : "Prince"
+}
+const globals = function(){
+    console.log("Hello! mayur")
+}
+
+const gayab = (num1,num2) => ({usernamew:"adsa"})
+console.log(gayab())
