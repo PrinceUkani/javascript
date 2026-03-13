@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code with prince</title>
+</head>
+<body style="background-color: gray;">
+    <h1 style=" color: rgb(0, 0, 0);" >  Now see the magic  </h1>
+    <button id="start"> start </button>
+    <button id="stop"> stop </button>
+    
+    
+</body>
+<script>
+    
+//   const changetext = function(){
+//        document.querySelector('h1').innerHTML = 'PrinceUkani'
+//    }
+//   document.querySelector("#stop").addEventListener('click' , function(){
+//       clearTimeout(changename)
+//       console.log("Timer stopped")
+//    })
+//   const changename = setTimeout(changetext , 1500)
+
+const saydate = function(str){
+    console.log(str , Date.now());
+} 
+document.querySelector('#start').addEventListener('click' , function(){
+    const printmachine = setInterval(saydate , 900 , 'prince')
+    
+})
+
+document.querySelector('#stop').addEventListener('click' , function(){
+    clearInterval(printmachine)
+})
+
+
+
+
+
+   
+</script>
+</html>
