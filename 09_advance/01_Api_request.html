@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request</title>
+</head>
+
+
+<body style="background-color: #212121; color: azure;">
+    <br>0 (UNSENT): The XMLHttpRequest object has been created, but the open() method has not been called yet.
+    <br>1 (OPENED): The open() method has been called, but the send() method has not been called yet.
+    <br>2 (HEADERS_RECEIVED): The send() method has been called, and the response headers and status are now available.
+    <br>3 (LOADING): The server has started sending the response data, and partial data is being received. You can
+    access partial data at this state.
+    <br>4 (DONE): The operation is complete, and the full response has been received from the server. This is when you
+    can process the final data.
+    <br>
+</body>
+<script>
+    
+    const apiurl = "https://api.github.com/users/PrinceUkani"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET' , apiurl);
+    xhr.onreadystatechange =function(){
+        console.log(xhr.readyState)
+
+        if(xhr.readyState === 4){
+            const data = JSOn.parse(this.responseText);
+            console.log(typeof data)
+            console.log(data.followes)
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
